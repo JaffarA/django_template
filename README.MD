@@ -1,5 +1,6 @@
 ```bash
 sh replace.sh $PROJECT_NAME $PROJECT_DESCRIPTION...
+# sh replace.sh project_name description is all args after $1
 ```
 
 # <<project_name>>
