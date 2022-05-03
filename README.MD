@@ -1,3 +1,7 @@
+```bash
+sh replace.sh $PROJECT_NAME $PROJECT_DESCRIPTION...
+```
+
 # <<project_name>>
 <<project_description>>
 
