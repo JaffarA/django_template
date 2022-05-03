@@ -10,6 +10,7 @@ sh replace.sh $PROJECT_NAME $PROJECT_DESCRIPTION...
 ```bash
 make makemigrations  # runs makemigrations on docker container
 make migrate  # runs migrations on docker container
+make mmigrate  # runs makemigrations + migrate
 make shell  # spawns a shell on docker container
 make format  # formats project using black&isort
 make build  # runs project using --build flag
