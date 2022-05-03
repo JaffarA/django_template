@@ -26,7 +26,7 @@ fi
 
 if [ ! -n $"$PROJECT_SECRET" ]
 then
-    PYTHON_COMMAND="python -c 'import secrets; print(secrets.token_urlsafe(32))'"
+    PYTHON_COMMAND="python -c 'import secrets; print(secrets.token_urlsafe(64))'"
     PROJECT_SECRET=$(eval $PYTHON_COMMAND)
 fi
 
@@ -38,4 +38,7 @@ echo "PROJECT_SECRET: $PROJECT_SECRET"
 # replace search strings with new values
 PROJECT_DIR=$PROJECT_NAME
 find ./ -type f \( ! -iname "replace.sh" \) -exec sed -i '' -e "s/\<\<project\_name\>\>/$PROJECT_NAME/g" {} \;
+find ./ -type f \( ! -iname "replace.sh" \) -exec sed -i '' -e "s/\<\<project\_description\>\>/$PROJECT_DESCRIPTION/g" {} \;
+find ./ -type f \( ! -iname "replace.sh" \) -exec sed -i '' -e "s/\<\<project\_password\>\>/$PROJECT_PASSWORD/g" {} \;
+find ./ -type f \( ! -iname "replace.sh" \) -exec sed -i '' -e "s/\<\<project\_secret\>\>/$PROJECT_SECRET/g" {} \;
 mv "<<project_name>>" "$PROJECT_NAME"
