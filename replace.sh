@@ -1,5 +1,4 @@
 #!/bin/bash
-
 valid=0
 PROJECT_NAME=$1
 PROJECT_DESCRIPTION="${@:2}"
